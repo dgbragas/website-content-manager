@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ds_libraries",
+  "info": {
+    "singularName": "ds-library",
+    "pluralName": "ds-libraries",
+    "displayName": "DSLibrary",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "content",
+        "navigation",
+        "media",
+        "overlay",
+        "forms"
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
