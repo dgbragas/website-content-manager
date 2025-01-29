@@ -33,6 +33,16 @@
     "url": {
       "type": "string",
       "regex": "^(\\/[^\\s]*)|(https?:\\/\\/([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,}(\\/[^\\s]*)?)$"
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }
