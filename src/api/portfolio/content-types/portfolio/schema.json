@@ -18,15 +18,6 @@
     "private": {
       "type": "boolean"
     },
-    "type": {
-      "type": "enumeration",
-      "enum": [
-        "Landing Page",
-        "Dashboard",
-        "Website",
-        "Portfolio"
-      ]
-    },
     "title": {
       "type": "string"
     },
@@ -35,14 +26,27 @@
       "regex": "^(\\/[^\\s]*)|(https?:\\/\\/([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,}(\\/[^\\s]*)?)$"
     },
     "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
+      ]
+    },
+    "type": {
+      "type": "customField",
+      "default": "[]",
+      "options": [
+        "Dashboard",
+        "Herobanner",
+        "Landing Page",
+        "Portfolio",
+        "Website"
       ],
-      "type": "media",
-      "multiple": true
+      "customField": "plugin::multi-select.multi-select"
     }
   }
 }
