@@ -21,21 +21,23 @@
     "category": {
       "type": "enumeration",
       "enum": [
-        "Landing Page",
+        "Commerce",
         "Dashboard",
         "Fullbanner",
+        "Landing Page",
         "UI Elements"
       ]
     },
     "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     }
   }
 }
