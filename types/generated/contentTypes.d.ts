@@ -382,7 +382,7 @@ export interface ApiDailyUiDailyUi extends Struct.CollectionTypeSchema {
   };
   attributes: {
     category: Schema.Attribute.Enumeration<
-      ['Landing Page', 'Dashboard', 'Fullbanner', 'UI Elements']
+      ['Commerce', 'Dashboard', 'Fullbanner', 'Landing Page', 'UI Elements']
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -419,7 +419,7 @@ export interface ApiDsLibraryDsLibrary extends Struct.CollectionTypeSchema {
   };
   attributes: {
     category: Schema.Attribute.Enumeration<
-      ['content', 'navigation', 'media', 'overlay', 'forms']
+      ['Content', 'Forms', 'Media', 'Navigation', 'Overlay']
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -472,9 +472,12 @@ export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
     private: Schema.Attribute.Boolean;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
-    type: Schema.Attribute.Enumeration<
-      ['Landing Page', 'Dashboard', 'Website', 'Portfolio']
-    >;
+    type: Schema.Attribute.JSON &
+      Schema.Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        ['Dashboard', 'Herobanner', 'Landing Page', 'Portfolio', 'Website']
+      > &
+      Schema.Attribute.DefaultTo<'[]'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -503,10 +506,10 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::post.post'> &
       Schema.Attribute.Private;
-    post: Schema.Attribute.Relation<'manyToOne', 'api::post.post'>;
+    posts: Schema.Attribute.Relation<'manyToMany', 'api::post.post'>;
     publishedAt: Schema.Attribute.DateTime;
     read_time: Schema.Attribute.Integer;
-    related_posts: Schema.Attribute.Relation<'oneToMany', 'api::post.post'>;
+    related_posts: Schema.Attribute.Relation<'manyToMany', 'api::post.post'>;
     tags: Schema.Attribute.JSON &
       Schema.Attribute.CustomField<
         'plugin::multi-select.multi-select',
