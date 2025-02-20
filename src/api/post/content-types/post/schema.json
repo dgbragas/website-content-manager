@@ -49,15 +49,15 @@
     },
     "related_posts": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::post.post",
-      "mappedBy": "post"
+      "mappedBy": "posts"
     },
-    "post": {
+    "posts": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::post.post",
-      "inversedBy": "related_posts"
+      "mappedBy": "related_posts"
     },
     "intro": {
       "type": "blocks"
