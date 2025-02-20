@@ -18,25 +18,26 @@
     "category": {
       "type": "enumeration",
       "enum": [
-        "content",
-        "navigation",
-        "media",
-        "overlay",
-        "forms"
+        "Content",
+        "Forms",
+        "Media",
+        "Navigation",
+        "Overlay"
       ]
     },
     "description": {
       "type": "string"
     },
     "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     }
   }
 }
