@@ -1,5 +1,9 @@
 module.exports = ({ env }) => {
-  console.log('Cloudinary Ready!');
+  console.log('Cloudinary config:', {
+    name: env('CLOUDINARY_NAME'),
+    key: env('CLOUDINARY_KEY'),
+    secret: env('CLOUDINARY_SECRET') ? '[OK]' : '[MISSING]',
+  });
 
   return {
     upload: {
