@@ -1,4 +1,5 @@
-const cloudinaryProvider = require('@strapi/provider-upload-cloudinary');
+const cloudinaryRaw = require('@strapi/provider-upload-cloudinary');
+const cloudinaryProvider = cloudinaryRaw.default || cloudinaryRaw;
 
 module.exports = ({ env }) => {
   console.log('☁️ Cloudinary Provider Loaded:', typeof cloudinaryProvider);
