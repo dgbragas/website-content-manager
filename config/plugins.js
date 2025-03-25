@@ -1,14 +1,12 @@
+const cloudinaryProvider = require('@strapi/provider-upload-cloudinary');
+
 module.exports = ({ env }) => {
-  console.log('Cloudinary config:', {
-    name: env('CLOUDINARY_NAME'),
-    key: env('CLOUDINARY_KEY'),
-    secret: env('CLOUDINARY_SECRET') ? '[OK]' : '[MISSING]',
-  });
+  console.log('☁️ Cloudinary Provider Loaded:', typeof cloudinaryProvider);
 
   return {
     upload: {
       config: {
-        provider: 'cloudinary',
+        provider: cloudinaryProvider,
         providerOptions: {
           cloud_name: env('CLOUDINARY_NAME'),
           api_key: env('CLOUDINARY_KEY'),
