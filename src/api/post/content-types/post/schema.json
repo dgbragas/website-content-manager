@@ -49,6 +49,18 @@
     },
     "intro": {
       "type": "blocks"
+    },
+    "posts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::post.post",
+      "inversedBy": "relatedPosts"
+    },
+    "relatedPosts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::post.post",
+      "mappedBy": "posts"
     }
   }
 }
