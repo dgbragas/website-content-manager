@@ -511,6 +511,7 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     read_time: Schema.Attribute.Integer;
     relatedPosts: Schema.Attribute.Relation<'manyToMany', 'api::post.post'>;
+    section: Schema.Attribute.String & Schema.Attribute.Required;
     tags: Schema.Attribute.JSON &
       Schema.Attribute.CustomField<
         'plugin::multi-select.multi-select',
