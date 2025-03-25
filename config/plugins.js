@@ -1,11 +1,7 @@
-const rawProvider = require('@strapi/provider-upload-cloudinary');
-
-const cloudinaryProvider = () => rawProvider;
-
 module.exports = ({ env }) => ({
   upload: {
     config: {
-      provider: cloudinaryProvider,
+      provider: '@strapi/cloudinary',
       providerOptions: {
         cloud_name: env('CLOUDINARY_NAME'),
         api_key: env('CLOUDINARY_KEY'),
