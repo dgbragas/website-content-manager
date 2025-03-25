@@ -20,6 +20,15 @@ module.exports = {
   bootstrap({ strapi }) {
     const provider = strapi.plugin('upload')?.provider;
 
+    if (provider && typeof provider.uploadStream === 'function') {
+      const originalUploadStream = provider.uploadStream;
+
+      provider.uploadStream = async (...args) => {
+        console.log('📦 Cloudinary uploadStream CALLED with:', args);
+        return await originalUploadStream(...args);
+      };
+    }
+
     console.log('🧪 Provider loaded in bootstrap:', {
       type: typeof provider,
       isFunction: typeof provider?.upload === 'function',
