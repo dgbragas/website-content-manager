@@ -8,20 +8,8 @@ module.exports = [
         useDefaults: true,
         directives: {
           'connect-src': ["'self'", 'https:'],
-          'img-src': [
-            "'self'",
-            'data:',
-            'blob:',
-            'market-assets.strapi.io',
-            'https://dgbragas.dev',
-          ],
-          'media-src': [
-            "'self'",
-            'data:',
-            'blob:',
-            'market-assets.strapi.io',
-            'https://dgbragas.dev',
-          ],
+          'img-src': ["'self'", 'data:', 'blob:', 'market-assets.strapi.io'],
+          'media-src': ["'self'", 'data:', 'blob:', 'market-assets.strapi.io'],
           upgradeInsecureRequests: null,
         },
       },

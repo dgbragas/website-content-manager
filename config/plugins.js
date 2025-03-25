@@ -1,3 +1,1 @@
-module.exports = ({ env }) => ({
-  upload: require('./plugins/upload')({ env }),
-});
+module.exports = ({ env }) => ({});
