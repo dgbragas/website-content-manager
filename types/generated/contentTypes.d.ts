@@ -471,13 +471,13 @@ export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     private: Schema.Attribute.Boolean;
     publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.String;
-    type: Schema.Attribute.JSON &
+    tags: Schema.Attribute.JSON &
       Schema.Attribute.CustomField<
         'plugin::multi-select.multi-select',
         ['Dashboard', 'Herobanner', 'Landing Page', 'Portfolio', 'Website']
       > &
       Schema.Attribute.DefaultTo<'[]'>;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
