@@ -8,6 +8,21 @@ module.exports = [
         useDefaults: true,
         directives: {
           'connect-src': ["'self'", 'https:'],
+          'img-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'market-assets.strapi.io',
+            'https://dgbragas.dev',
+          ],
+          'media-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'market-assets.strapi.io',
+            'https://dgbragas.dev',
+          ],
+          upgradeInsecureRequests: null,
         },
       },
     },
@@ -16,7 +31,12 @@ module.exports = [
     name: 'strapi::cors',
     config: {
       enabled: true,
-      origin: ['http://localhost:3000', 'http://localhost:4321'],
+      origin: [
+        'http://localhost:3000',
+        'http://localhost:4321',
+        'https://dgbragas.dev',
+      ],
+      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
       headers: [
         'Content-Type',
         'Authorization',
@@ -24,6 +44,7 @@ module.exports = [
         'Accept',
         'User-Agent',
       ],
+      keepHeaderOnError: true,
     },
   },
   'strapi::poweredBy',
