@@ -425,10 +425,7 @@ export interface ApiDsLibraryDsLibrary extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.String;
-    images: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -459,10 +456,7 @@ export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
-    images: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -474,7 +468,14 @@ export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
     tags: Schema.Attribute.JSON &
       Schema.Attribute.CustomField<
         'plugin::multi-select.multi-select',
-        ['Dashboard', 'Herobanner', 'Landing Page', 'Portfolio', 'Website']
+        [
+          'Dashboard',
+          'Herobanner',
+          'Landing Page',
+          'Portfolio',
+          'Redesign',
+          'Website',
+        ]
       > &
       Schema.Attribute.DefaultTo<'[]'>;
     title: Schema.Attribute.String;

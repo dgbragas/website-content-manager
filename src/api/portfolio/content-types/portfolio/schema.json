@@ -25,9 +25,9 @@
       "type": "string",
       "regex": "^(\\/[^\\s]*)|(https?:\\/\\/([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,}(\\/[^\\s]*)?)$"
     },
-    "images": {
+    "image": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": false,
       "allowedTypes": [
         "images",
@@ -44,6 +44,7 @@
         "Herobanner",
         "Landing Page",
         "Portfolio",
+        "Redesign",
         "Website"
       ],
       "customField": "plugin::multi-select.multi-select"
