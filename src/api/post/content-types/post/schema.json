@@ -47,18 +47,6 @@
         "audios"
       ]
     },
-    "related_posts": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::post.post",
-      "mappedBy": "posts"
-    },
-    "posts": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::post.post",
-      "mappedBy": "related_posts"
-    },
     "intro": {
       "type": "blocks"
     }
