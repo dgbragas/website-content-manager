@@ -8,8 +8,22 @@ module.exports = [
         useDefaults: true,
         directives: {
           'connect-src': ["'self'", 'https:'],
-          'img-src': ["'self'", 'data:', 'blob:', 'market-assets.strapi.io'],
-          'media-src': ["'self'", 'data:', 'blob:', 'market-assets.strapi.io'],
+          'img-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'market-assets.strapi.io',
+            // INFO: Strapi auto generated library
+            'hopeful-friends-b95c2ade41.media.strapiapp.com',
+          ],
+          'media-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'market-assets.strapi.io',
+            // INFO: Strapi auto generated library
+            'hopeful-friends-b95c2ade41.media.strapiapp.com',
+          ],
           upgradeInsecureRequests: null,
         },
       },
