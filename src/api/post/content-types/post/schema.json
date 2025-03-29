@@ -40,12 +40,7 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "allowedTypes": ["images", "files", "videos", "audios"]
     },
     "intro": {
       "type": "blocks"
@@ -54,17 +49,10 @@
       "type": "string",
       "required": true
     },
-    "posts": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::post.post",
-      "inversedBy": "relatedPosts"
-    },
     "relatedPosts": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::post.post",
-      "mappedBy": "posts"
+      "target": "api::post.post"
     }
   }
 }
