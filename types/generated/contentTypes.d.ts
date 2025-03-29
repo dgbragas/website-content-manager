@@ -403,6 +403,7 @@ export interface ApiDailyUiDailyUi extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    url: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -515,7 +516,7 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
     tags: Schema.Attribute.JSON &
       Schema.Attribute.CustomField<
         'plugin::multi-select.multi-select',
-        ['acessibilidade', 'react', 'js', 'tecnologia', 'design', 'ui/ux']
+        ['Acessibilidade', 'React', 'JS', 'Tecnologia', 'Design', 'UI/UX']
       > &
       Schema.Attribute.DefaultTo<'[]'>;
     title: Schema.Attribute.String &
