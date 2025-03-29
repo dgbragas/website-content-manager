@@ -19,12 +19,12 @@
       "type": "customField",
       "default": "[]",
       "options": [
-        "acessibilidade",
-        "react",
-        "js",
-        "tecnologia",
-        "design",
-        "ui/ux"
+        "Acessibilidade",
+        "React",
+        "JS",
+        "Tecnologia",
+        "Design",
+        "UI/UX"
       ],
       "customField": "plugin::multi-select.multi-select"
     },
@@ -50,6 +50,10 @@
     "intro": {
       "type": "blocks"
     },
+    "section": {
+      "type": "string",
+      "required": true
+    },
     "posts": {
       "type": "relation",
       "relation": "manyToMany",
@@ -61,10 +65,6 @@
       "relation": "manyToMany",
       "target": "api::post.post",
       "mappedBy": "posts"
-    },
-    "section": {
-      "type": "string",
-      "required": true
     }
   }
 }
