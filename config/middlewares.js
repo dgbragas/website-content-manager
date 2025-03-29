@@ -51,6 +51,7 @@ module.exports = [
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
+  'strapi::responses',
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
