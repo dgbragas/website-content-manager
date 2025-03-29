@@ -464,6 +464,7 @@ export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
       'api::portfolio.portfolio'
     > &
       Schema.Attribute.Private;
+    post: Schema.Attribute.Relation<'manyToOne', 'api::post.post'>;
     private: Schema.Attribute.Boolean;
     publishedAt: Schema.Attribute.DateTime;
     tags: Schema.Attribute.JSON &
@@ -479,7 +480,6 @@ export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
         ]
       > &
       Schema.Attribute.DefaultTo<'[]'>;
-    testPosts: Schema.Attribute.Relation<'manyToMany', 'api::post.post'>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -509,10 +509,12 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::post.post'> &
       Schema.Attribute.Private;
-    posts: Schema.Attribute.Relation<'manyToMany', 'api::portfolio.portfolio'>;
+    portfolios: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::portfolio.portfolio'
+    >;
     publishedAt: Schema.Attribute.DateTime;
     read_time: Schema.Attribute.Integer;
-    relatedPosts: Schema.Attribute.Relation<'manyToMany', 'api::post.post'>;
     section: Schema.Attribute.String & Schema.Attribute.Required;
     tags: Schema.Attribute.JSON &
       Schema.Attribute.CustomField<

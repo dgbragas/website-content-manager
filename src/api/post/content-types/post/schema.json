@@ -54,16 +54,11 @@
       "type": "string",
       "required": true
     },
-    "relatedPosts": {
+    "portfolios": {
       "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::post.post"
-    },
-    "posts": {
-      "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToMany",
       "target": "api::portfolio.portfolio",
-      "inversedBy": "testPosts"
+      "mappedBy": "post"
     }
   }
 }

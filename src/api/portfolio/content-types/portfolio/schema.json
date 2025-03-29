@@ -49,11 +49,11 @@
       ],
       "customField": "plugin::multi-select.multi-select"
     },
-    "testPosts": {
+    "post": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "manyToOne",
       "target": "api::post.post",
-      "mappedBy": "posts"
+      "inversedBy": "portfolios"
     }
   }
 }
