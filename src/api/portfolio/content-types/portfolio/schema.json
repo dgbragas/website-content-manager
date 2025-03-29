@@ -48,6 +48,12 @@
         "Website"
       ],
       "customField": "plugin::multi-select.multi-select"
+    },
+    "testPosts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::post.post",
+      "mappedBy": "posts"
     }
   }
 }
