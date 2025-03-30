@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "post_relationships",
+  "info": {
+    "singularName": "post-relationship",
+    "pluralName": "post-relationships",
+    "displayName": "PostRelationship"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "post": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::post.post",
+      "inversedBy": "relatedPost"
+    }
+  }
+}
