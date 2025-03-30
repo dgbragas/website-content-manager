@@ -491,6 +491,7 @@ export interface ApiPostRelationshipPostRelationship
   extends Struct.CollectionTypeSchema {
   collectionName: 'post_relationships';
   info: {
+    description: '';
     displayName: 'PostRelationship';
     pluralName: 'post-relationships';
     singularName: 'post-relationship';
@@ -514,7 +515,9 @@ export interface ApiPostRelationshipPostRelationship
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    url: Schema.Attribute.String;
+    url: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'https://dgbragas.dev/blog/'>;
   };
 }
 

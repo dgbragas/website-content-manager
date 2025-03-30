@@ -4,7 +4,8 @@
   "info": {
     "singularName": "post-relationship",
     "pluralName": "post-relationships",
-    "displayName": "PostRelationship"
+    "displayName": "PostRelationship",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,7 +13,9 @@
   "pluginOptions": {},
   "attributes": {
     "url": {
-      "type": "string"
+      "type": "string",
+      "default": "https://dgbragas.dev/blog/",
+      "required": true
     },
     "title": {
       "type": "string"
