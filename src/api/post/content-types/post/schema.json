@@ -54,11 +54,11 @@
       "type": "string",
       "required": true
     },
-    "relatedPost": {
+    "related_posts": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::post-relationship.post-relationship",
-      "mappedBy": "post"
+      "inversedBy": "posts"
     }
   }
 }

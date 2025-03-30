@@ -509,7 +509,7 @@ export interface ApiPostRelationshipPostRelationship
       'api::post-relationship.post-relationship'
     > &
       Schema.Attribute.Private;
-    post: Schema.Attribute.Relation<'manyToOne', 'api::post.post'>;
+    posts: Schema.Attribute.Relation<'manyToMany', 'api::post.post'>;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -544,8 +544,8 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     read_time: Schema.Attribute.Integer;
-    relatedPost: Schema.Attribute.Relation<
-      'oneToMany',
+    related_posts: Schema.Attribute.Relation<
+      'manyToMany',
       'api::post-relationship.post-relationship'
     >;
     section: Schema.Attribute.String & Schema.Attribute.Required;

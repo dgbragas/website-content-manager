@@ -20,11 +20,11 @@
     "title": {
       "type": "string"
     },
-    "post": {
+    "posts": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::post.post",
-      "inversedBy": "relatedPost"
+      "mappedBy": "related_posts"
     }
   }
 }
