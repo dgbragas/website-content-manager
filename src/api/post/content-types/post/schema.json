@@ -54,10 +54,10 @@
       "type": "string",
       "required": true
     },
-    "portfolios": {
+    "relatedPost": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::portfolio.portfolio",
+      "target": "api::post-relationship.post-relationship",
       "mappedBy": "post"
     }
   }

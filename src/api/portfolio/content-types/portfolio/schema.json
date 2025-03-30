@@ -48,12 +48,6 @@
         "Website"
       ],
       "customField": "plugin::multi-select.multi-select"
-    },
-    "post": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::post.post",
-      "inversedBy": "portfolios"
     }
   }
 }

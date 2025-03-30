@@ -464,7 +464,6 @@ export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
       'api::portfolio.portfolio'
     > &
       Schema.Attribute.Private;
-    post: Schema.Attribute.Relation<'manyToOne', 'api::post.post'>;
     private: Schema.Attribute.Boolean;
     publishedAt: Schema.Attribute.DateTime;
     tags: Schema.Attribute.JSON &
@@ -480,6 +479,37 @@ export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
         ]
       > &
       Schema.Attribute.DefaultTo<'[]'>;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    url: Schema.Attribute.String;
+  };
+}
+
+export interface ApiPostRelationshipPostRelationship
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'post_relationships';
+  info: {
+    displayName: 'PostRelationship';
+    pluralName: 'post-relationships';
+    singularName: 'post-relationship';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::post-relationship.post-relationship'
+    > &
+      Schema.Attribute.Private;
+    post: Schema.Attribute.Relation<'manyToOne', 'api::post.post'>;
+    publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -509,12 +539,12 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::post.post'> &
       Schema.Attribute.Private;
-    portfolios: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::portfolio.portfolio'
-    >;
     publishedAt: Schema.Attribute.DateTime;
     read_time: Schema.Attribute.Integer;
+    relatedPost: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::post-relationship.post-relationship'
+    >;
     section: Schema.Attribute.String & Schema.Attribute.Required;
     tags: Schema.Attribute.JSON &
       Schema.Attribute.CustomField<
@@ -1043,6 +1073,7 @@ declare module '@strapi/strapi' {
       'api::daily-ui.daily-ui': ApiDailyUiDailyUi;
       'api::ds-library.ds-library': ApiDsLibraryDsLibrary;
       'api::portfolio.portfolio': ApiPortfolioPortfolio;
+      'api::post-relationship.post-relationship': ApiPostRelationshipPostRelationship;
       'api::post.post': ApiPostPost;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
