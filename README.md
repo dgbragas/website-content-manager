@@ -1,61 +1,22 @@
-# 🚀 Getting started with Strapi
+# `Strapi` - Provedor de conteúdos
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+`content-manager` é o meu projeto responsável por fornecer parte dos conteúdos exibidos em [dgbragas.dev](https://dgbragas.dev) — meu site pessoal onde compartilho postagens, ideias e trabalhos desenvolvidos ao longo dos anos.
 
-### `develop`
+## Conteúdos disponibilizados
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+Através do `Strapi Cloud`, esse projeto serve como fonte para uma série de conteúdos consumidos diretamente no [repositório dgbragas.dev](https://github.com/dgbragas/dgbragas.dev). Alguns deles estão disponíveis nas seguintes páginas:
 
-```
-npm run develop
-# or
-yarn develop
-```
-
-### `start`
-
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
-
-```
-npm run start
-# or
-yarn start
-```
-
-### `build`
-
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
-
-```
-npm run build
-# or
-yarn build
-```
-
-## ⚙️ Deployment
-
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
-
-```
-yarn strapi deploy
-```
-
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
+- `blog`: Postagens com foco em Acessibilidade, UI/UX e Desenvolvimento Front-end;
+  - ↳ https://dgbragas.dev/blog
+- `portfólio`: Projetos desenvolvidos ao longo da minha trajetória como UI Engineer — Designer de Interfaces e Desenvolvedor Front-end.
+  - ↳ https://dgbragas.dev/portfolio
+- `daily-ui`: Interfaces criadas durante o desafio DailyUI — _esse ainda tá em progresso 😅_
+  - ↳ https://dgbragas.dev/daily-ui
 
 ---
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+### Contate-me
+
+- E-mail: work@dgbragas.com;
+- [Instagram](https://instagram.com/dgbragas.dev);
+- [LinkedIn](https://linkedin.com/in/dgbragas);
