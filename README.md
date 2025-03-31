@@ -1,4 +1,7 @@
+<img width="1500" alt="github-thumb" src="https://github.com/user-attachments/assets/cb963624-12ed-430a-977c-c6ec2f481483" />
+
 # `Strapi` - Provedor de conteúdos
+
 
 `content-manager` é o meu projeto responsável por fornecer parte dos conteúdos exibidos em [dgbragas.dev](https://dgbragas.dev) — meu site pessoal onde compartilho postagens, ideias e trabalhos desenvolvidos ao longo dos anos.
 
