@@ -517,7 +517,7 @@ export interface ApiPostRelationshipPostRelationship
       Schema.Attribute.Private;
     url: Schema.Attribute.String &
       Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'https://dgbragas.dev/blog/'>;
+      Schema.Attribute.DefaultTo<'/blog/'>;
   };
 }
 
