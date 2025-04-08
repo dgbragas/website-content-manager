@@ -14,7 +14,7 @@
   "attributes": {
     "url": {
       "type": "string",
-      "default": "https://dgbragas.dev/blog/",
+      "default": "/blog/",
       "required": true
     },
     "title": {
