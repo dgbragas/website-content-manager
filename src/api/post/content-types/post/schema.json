@@ -24,7 +24,8 @@
         "JS",
         "Tecnologia",
         "Design",
-        "UI/UX"
+        "UI/UX",
+        "Code"
       ],
       "customField": "plugin::multi-select.multi-select"
     },
@@ -59,6 +60,10 @@
       "relation": "manyToMany",
       "target": "api::post-relationship.post-relationship",
       "inversedBy": "posts"
+    },
+    "released_at": {
+      "type": "date",
+      "required": false
     }
   }
 }

@@ -548,11 +548,20 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
       'manyToMany',
       'api::post-relationship.post-relationship'
     >;
+    released_at: Schema.Attribute.Date;
     section: Schema.Attribute.String & Schema.Attribute.Required;
     tags: Schema.Attribute.JSON &
       Schema.Attribute.CustomField<
         'plugin::multi-select.multi-select',
-        ['Acessibilidade', 'React', 'JS', 'Tecnologia', 'Design', 'UI/UX']
+        [
+          'Acessibilidade',
+          'React',
+          'JS',
+          'Tecnologia',
+          'Design',
+          'UI/UX',
+          'Code',
+        ]
       > &
       Schema.Attribute.DefaultTo<'[]'>;
     title: Schema.Attribute.String &
