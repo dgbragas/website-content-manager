@@ -511,6 +511,7 @@ export interface ApiPostRelationshipPostRelationship
       Schema.Attribute.Private;
     posts: Schema.Attribute.Relation<'manyToMany', 'api::post.post'>;
     publishedAt: Schema.Attribute.DateTime;
+    released_at: Schema.Attribute.Date;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

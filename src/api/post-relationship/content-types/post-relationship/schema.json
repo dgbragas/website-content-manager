@@ -25,6 +25,9 @@
       "relation": "manyToMany",
       "target": "api::post.post",
       "mappedBy": "related_posts"
+    },
+    "released_at": {
+      "type": "date"
     }
   }
 }
